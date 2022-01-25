@@ -15,6 +15,12 @@ app.get("/", async (req, res) => {
   })
 })
 
+app.get("/get-message", async (req, res) => {
+  return res.json({
+    message: "Sending message from server",
+    status: true
+  })
+})
 app.post("/send-data", async (req, res) => {
   console.log(req.body);
   const {
