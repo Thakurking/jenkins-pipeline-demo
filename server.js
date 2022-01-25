@@ -8,6 +8,13 @@ const PORT = 5050;
 
 app.use(express.json());
 
+app.get("/", async (req, res) => {
+  return res.json({
+    message: "Calling from server",
+    status: true
+  })
+})
+
 app.post("/send-data", async (req, res) => {
   console.log(req.body);
   const {
